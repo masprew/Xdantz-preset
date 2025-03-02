@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Produk</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-mode"> 
+
+    <!-- Tombol Ubah Tema -->
+    <button class="theme-toggle" onclick="toggleTheme()">🌞</button>
+
+    <!-- Halaman Masuk -->
+    <div id="welcome-screen">
+        <h2>Masukkan Nama Anda</h2>
+        <input type="text" id="username" placeholder="Nama Anda">
+        <button onclick="enterWebsite()">Enter</button>
+    </div>
+
+    <!-- Halaman Utama -->
+    <div id="main-content" style="display: none;">
+        <header>
+            <h1 id="user-greeting"></h1>
+        </header>
+
+        <!-- Animasi GIF -->
+        <div class="gif-container">
+            <img src="https://i.imgflip.com/9lzr9b.gif" alt="Animasi GIF">
+        </div>
+
+        <!-- Profil -->
+        <section class="profile">
+            <h2>
+                <img src="https://files.catbox.moe/fcijvs.webp" alt="Profil" class="profile-image"> 
+                X` Dantz 4Bigail
+            </h2>
+            <p>ʜᴀɪ ᴄᴜʏʏʏ, ᴡᴇʟᴋᴏᴍ ᴅɪ ᴡᴇʙ ᴅᴀɴᴛᴢ ʏᴀ, ᴅɪsɪɴɪ sᴍᴜᴀ ᴘʀᴇsᴇᴛ ᴜᴅᴀʜ ɢᴡ ᴍᴀsᴜᴋɪɴ ᴋᴇ ᴡᴇʙ ɪɴɪ, ᴋʟᴏ ᴘʀᴇsᴇᴛɴʏᴀ ɢᴀ ᴋᴇᴛᴇᴍᴜ ᴛɪɴɢɢᴀʟ ᴄᴀʀɪ ᴀᴊᴀ ᴅɪ ᴋᴏʟᴏᴍ ᴘᴇɴᴄᴀʀɪᴀɴ, ɴʏᴀʀɪɴʏᴀ ʙᴜᴋᴀɴ ɴᴀᴍᴀ sᴏᴜɴᴅ/ᴅᴊ ʏᴀ, ᴛᴀᴘɪ ʙᴀɢɪᴀɴ ᴋᴇ ʙᴇʀᴀᴘᴀ ɢᴡ ᴜᴘʟᴏᴀᴅɴʏᴀ, ᴍɪsᴀ ᴛᴇs ᴏᴍʙᴀᴋ (𝟶𝟷), ɴᴀʜ ᴋᴀʟɪᴀɴ ᴛɪɴɢɢᴀʟ ᴋᴇᴛɪᴋ 𝟶𝟷 ᴀᴊᴀ, ᴛᴏᴍʙᴏʟ ᴘʀᴇᴠɪᴇᴡ ɪᴛᴜ ʙᴜᴀᴛ ᴍᴇʟɪʜᴀᴛ ᴠɪᴅᴇᴏɴʏᴀ, ᴊᴀᴅɪ ᴋʟᴏ ᴋᴀʟɪᴀɴ ʙɪɴɢᴜɴɢ ᴍᴀɴᴀ ᴘʀᴇsᴇᴛ ʏᴀɴɢ ᴅɪᴄᴀʀɪ ᴛɪɴɢɢᴀʟ ᴘᴇɴᴄᴇᴛ ᴘʀᴇᴠɪᴇᴡ ᴀᴊᴀ, ᴋʟᴏ ᴀᴅᴀ ʏᴀɴɢ ᴇʀʀᴏʀ ᴅᴍ ᴛᴛ ʏᴀ</p>
+        </section>
+
+        <!-- Pencarian Produk -->
+        <div class="search-container">
+            <input type="text" id="search" placeholder="Cari Preset..." onkeyup="searchProduct()">
+            <button onclick="clearSearch()">❌</button>
+        </div>
+
+        <!-- Daftar Produk -->
+        <div id="product-list">
+            <div class="product" data-name="Tes Ombak 01, Reza NOH">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvZ5bGi8jJ13mDxXZSlsirHg4s7SEgpFXihCYXGO1KtizTAi3K8uNJ00R2&s=10" alt="Produk A">
+                <h3>Tes Ombak (01)</h3>
+                <p>Sound Reza NOH</p>
+
+                <!-- Tombol Produk -->
+                <div class="button-container">
+                    <div class="left-buttons">
+                        <button class="buy" onclick="buyProduct1('https://alightcreative.com/am/share/u/LAbbwnJOZnUhubQWKRa2W25JPUn2/p/MSiZdcenK2-0083f1f43954809a')">Go 5MB</button>
+                        <button class="buy" onclick="buyProduct2('https://drive.google.com/file/d/1BSVitWvaY5an2ahnXWB1yZw1BLoG9pvz/view?usp=drivesdk')">Go Xml</button>
+                    </div>
+                    <div class="right-buttons">
+                        <button class="copy" onclick="copyProduct1('https://alightcreative.com/am/share/u/LAbbwnJOZnUhubQWKRa2W25JPUn2/p/MSiZdcenK2-0083f1f43954809a')">Copy 5Mb</button>
+                        <button class="copy" onclick="copyProduct2('https://drive.google.com/file/d/1BSVitWvaY5an2ahnXWB1yZw1BLoG9pvz/view?usp=drivesdk')">Copy Xml</button>
+                    </div>
+                </div>
+
+                <!-- Tombol Buy 3 (Tengah Bawah) -->
+                <button class="buy buy-3" onclick="buyProduct3('https://vt.tiktok.com/ZSMmAUpF1/')">Preview</button>
+            </div>
+
+            <div class="product" data-name="Tes Ombak 02, TONGLAO133">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvZ5bGi8jJ13mDxXZSlsirHg4s7SEgpFXihCYXGO1KtizTAi3K8uNJ00R2&s=10" alt="Produk B">
+                <h3>Tes Ombak (02)</h3>
+                <p>Sound TONGLAO133</p>
+
+                <div class="button-container">
+                    <div class="left-buttons">
+                        <button class="buy" onclick="buyProduct1('https://alightcreative.com/am/share/u/LAbbwnJOZnUhubQWKRa2W25JPUn2/p/qVEeAp1JMX-91ecc25c115edacb')">Go 5Mb</button>
+                        <button class="buy" onclick="buyProduct2('https://drive.google.com/file/d/1BUWuIYv4JNosvM-7msp2XZkZizbX5iYH/view?usp=drivesdk')">Go Xml</button>
+                    </div>
+                    <div class="right-buttons">
+                        <button class="copy" onclick="copyProduct1('https://alightcreative.com/am/share/u/LAbbwnJOZnUhubQWKRa2W25JPUn2/p/qVEeAp1JMX-91ecc25c115edacb')">Copy 5Mb</button>
+                        <button class="copy" onclick="copyProduct2('https://drive.google.com/file/d/1BUWuIYv4JNosvM-7msp2XZkZizbX5iYH/view?usp=drivesdk')">Copy Xml</button>
+                    </div>
+                </div>
+
+                <button class="buy buy-3" onclick="buyProduct3('https://vt.tiktok.com/ZSMmD8NKR/')">Preview</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
