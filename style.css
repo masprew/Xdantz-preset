@@ -17,7 +17,7 @@ body {
 .theme-toggle {
     position: fixed;
     right: 20px;
-    top: 20px;
+    top: 300px;
     padding: 10px 10px;
     font-size: 24px;
     border: none;
